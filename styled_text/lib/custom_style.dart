@@ -12,6 +12,9 @@ class CustomStyle with Diagnosticable implements TextStyle {
   CustomStyle({this.baseStyle});
 
   TextStyle get style => baseStyle ?? const TextStyle();
+    
+  @override
+  final TextOverflow? overflow;
 
   @override
   TextStyle apply(
