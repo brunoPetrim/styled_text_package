@@ -41,7 +41,8 @@ class CustomStyle with Diagnosticable implements TextStyle {
       ui.TextLeadingDistribution? leadingDistribution,
       Locale? locale,
       List<Shadow>? shadows,
-      List<ui.FontFeature>? fontFeatures}) {
+      List<ui.FontFeature>? fontFeatures,
+      TextOverflow? overflow}) {
     return style.apply(
       color: color,
       backgroundColor: backgroundColor,
@@ -67,6 +68,7 @@ class CustomStyle with Diagnosticable implements TextStyle {
       locale: locale,
       shadows: shadows,
       fontFeatures: fontFeatures,
+      overflow: overflow ?? this.overflow
     );
   }
 
@@ -108,7 +110,8 @@ class CustomStyle with Diagnosticable implements TextStyle {
       Color? decorationColor,
       TextDecorationStyle? decorationStyle,
       double? decorationThickness,
-      String? debugLabel}) {
+      String? debugLabel,
+      TextOverflow? overflow}) {
     return style.copyWith(
       inherit: inherit,
       color: color,
@@ -133,6 +136,7 @@ class CustomStyle with Diagnosticable implements TextStyle {
       decorationStyle: decorationStyle,
       decorationThickness: decorationThickness,
       debugLabel: debugLabel,
+      overflow: overflow ?? this.overflow
     );
   }
 
